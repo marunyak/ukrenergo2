@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding:25px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+}
+
+h1 {
+    margin: 25px 0 25px 0;
+    text-align: center;
+}
+
+#info {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#info td, #info th {
+    border: 1px solid #ddd;
+    padding: 26px;
+}
+
+#info tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#info tr:hover {
+    background-color: #ddd;
+}
+
+#info th {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#info th:hover {
+    cursor: pointer;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    border-radius: 4px;
+}
+
+.pagination > li {
+    padding: 0.75rem 1rem;
+    margin-left: -1px;
+    min-width: 3.5rem;
+    text-align: center;
+    box-shadow: none !important;
+    border: 1px solid #ced4da !important;
+    color: black;
+    font-weight: 900;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.pagination > li.active {
+    background-color: #4CAF50;
+    color:#fff;
+}
+
+input[type="text"] {
+    padding: 10px;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    border: 1px solid #4CAF50;
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 200px;
+}
