@@ -1,4 +1,4 @@
-# ukrenergo2
+# Ukrenergo2
 Demo : http://marunyak.github.io/ukrenergo2
 
 ## Функции:
