@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ukrenergo2/static/css/main.a442520c.chunk.css",
+    "main.js": "/ukrenergo2/static/js/main.7a022960.chunk.js",
+    "main.js.map": "/ukrenergo2/static/js/main.7a022960.chunk.js.map",
+    "runtime-main.js": "/ukrenergo2/static/js/runtime-main.88ea400f.js",
+    "runtime-main.js.map": "/ukrenergo2/static/js/runtime-main.88ea400f.js.map",
+    "static/js/2.d39cde54.chunk.js": "/ukrenergo2/static/js/2.d39cde54.chunk.js",
+    "static/js/2.d39cde54.chunk.js.map": "/ukrenergo2/static/js/2.d39cde54.chunk.js.map",
+    "index.html": "/ukrenergo2/index.html",
+    "precache-manifest.e5522d47dd0b5f8bdefee3a1441dc2d2.js": "/ukrenergo2/precache-manifest.e5522d47dd0b5f8bdefee3a1441dc2d2.js",
+    "service-worker.js": "/ukrenergo2/service-worker.js",
+    "static/css/main.a442520c.chunk.css.map": "/ukrenergo2/static/css/main.a442520c.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.88ea400f.js",
+    "static/js/2.d39cde54.chunk.js",
+    "static/css/main.a442520c.chunk.css",
+    "static/js/main.7a022960.chunk.js"
+  ]
+}
