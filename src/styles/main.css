@@ -15,7 +15,7 @@ body {
 header {
     padding:25px;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: space-between
 }
 
 img {
@@ -36,15 +36,7 @@ h1 {
 
 #info td, #info th {
     border: 1px solid #ddd;
-    padding: 26px;
-}
-
-#info tr:nth-child(even){
-    background-color: #f2f2f2;
-}
-
-#info tr:hover {
-    background-color: #ddd;
+    padding: 1em;
 }
 
 #info th {
@@ -85,13 +77,102 @@ h1 {
     color:#fff;
 }
 
-input[type="text"] {
-    padding: 10px;
-    outline: 0;
+input {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
     border: 0;
+}
+
+input[name="search"] {
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid #4CAF50;
     margin-left: 50px;
     margin-top: 50px;
     width: 200px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[name="search"]:focus {
+    width: 30%;
+}
+
+.add-row {
+    text-align: center;
+    margin: 50px auto;
+    padding: 15px;
+    width: 200px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+
+.save {
+    text-align: center;
+    margin-top: 25px;
+    padding: 15px;
+    width: 200px;
+    height: 50px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 16px;
+        overflow: auto;
+    }
+
+    input[name="search"] {
+        margin-left: 25px;
+        margin-top: 25px;
+    }
+
+    .save {
+        margin-top: 15px;
+    }
+
+    img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #container {
+        overflow-x: scroll;
+    }
+
+    #info td, #info th{
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    html {
+        font-size: 16px;
+        overflow: auto;
+    }
+
+    input[name="search"] {
+        width: 150px;
+    }
+
+    #info td, #info th{
+        font-size: 14px;
+    }
+
+    .add-row, .save {
+        padding: 10px;
+        width: 150px;
+    }
+
+    .save {
+        margin-top: 25px;
+        height: 35px;
+    }
 }

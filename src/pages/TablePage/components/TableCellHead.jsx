@@ -1,9 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
-function TableCellHead(props) {
-    const { row, column, data } = props.item;
-    return(
-        <th row={row} column={column} onClick={props.onSort.bind(null, `${column}`)}>{data}</th>
-    );
+function TableCellHead({ item: { row, column, data }, onSort }) {
+  return (
+    <th row={row} column={column} onClick={onSort.bind(null, column)}>{data}</th>
+  );
 }
 export default TableCellHead;

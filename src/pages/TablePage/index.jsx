@@ -10,29 +10,21 @@ function TablePage() {
   const [dataTable, setTable] = useState({});
   const [search, setSearch] = useState('');
   const [rowsSearch, setRowsSearch] = useState([]);
-  const [sortDirection, setSortDirection ] = useState({});
+  const [sortDirection, setSortDirection] = useState({});
 
   useEffect(() => {
-
     const setTypeSort = (num) => {
-      let obj = {};
-      for(let i = 0; i < num; i++) {
+      const obj = {};
+      for (let i = 0; i < num; i += 1) {
         obj[i] = 'none';
       }
       setSortDirection(obj);
-    }
-
-    fetch('https://5e3e99e964c3f60014550bde.mockapi.io/ukrenergo', {
-      method: 'GET',
-      headers:{
-      'Content-Type': 'application/json',
-      }
-    }
-    )
+    };
+    fetch('https://pacific-atoll-17322.herokuapp.com/?do=get')
       .then(res => res.json())
       .then(data => {
-        setTable(data[0]);
-        setTypeSort(data[0].header_cells.length);
+        setTable(data);
+        setTypeSort(data.header_cells.length);
         setLoading(false);
       })
       .catch(err => console.error(err));
@@ -40,20 +32,25 @@ function TablePage() {
 
   return (
     <>
-      <Header />
+      <Header table={dataTable} />
       <Main>
-        <Search search={search}
-                table={dataTable.cells}
-                setSearch={setSearch}
-                setTable={setTable}
-                setRowsSearch={setRowsSearch}/>
-        {!loading ? <Table table={dataTable}
-                           setTable={setTable}
-                           search={search}
-                           rowsSearch={rowsSearch}
-                           sortDirection={sortDirection}
-                           setSortDirection={setSortDirection}
-                            /> : <Spinner />}
+        <Search
+          search={search}
+          table={dataTable.cells}
+          setSearch={setSearch}
+          setTable={setTable}
+          setRowsSearch={setRowsSearch}
+        />
+        {!loading ? (
+          <Table
+            table={dataTable}
+            setTable={setTable}
+            search={search}
+            rowsSearch={rowsSearch}
+            sortDirection={sortDirection}
+            setSortDirection={setSortDirection}
+          />
+        ) : <Spinner />}
       </Main>
     </>
   );
